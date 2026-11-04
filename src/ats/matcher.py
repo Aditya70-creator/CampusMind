@@ -36,7 +36,7 @@ def analyze_resume_jd(resume_text: str, jd_text: str) -> dict:
     # Keyword Extraction & Gap Analysis
     feature_names = vectorizer.get_feature_names_out()
     resume_vector = tfidf_matrix[0].toarray()[0]
-    jd_vector = tfidf_matrix[1].toarray()[1]
+    jd_vector = tfidf_matrix[1].toarray()[0]  # <--- Yahan [1 ki jagah [0]] karna hai
 
     matched = []
     missing = []
