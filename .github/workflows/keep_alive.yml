@@ -1,0 +1,42 @@
+name: Keep CampusMind App Awake (24x7)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping-campusmind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Requests
+        run: pip install requests
+
+      - name: Ping CampusMind App with Retry
+        run: |
+          python -c "
+          import requests, time
+          url = 'https://campusmind-etgz9tg66wuauygmtnx6up.streamlit.app/'
+          headers = {'User-Agent': 'Mozilla/5.0'}
+          success = False
+          for attempt in range(3):
+              try:
+                  response = requests.get(url, headers=headers, timeout=45)
+                  if response.status_code < 500:
+                      print(f'Ping successful! Status code: {response.status_code}')
+                      success = True
+                      break
+                  else:
+                      print(f'Server error {response.status_code}, retrying...')
+              except Exception as e:
+                  print(f'Attempt {attempt+1} failed: {e}')
+              time.sleep(10)
+          if not success:
+              print('All ping attempts failed.')
+              exit(0)
+          "
