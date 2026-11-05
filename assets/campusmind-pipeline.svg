@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Outer Frame -->
+  <rect width="1200" height="250" rx="16" fill="url(#pipeBg)" stroke="#1e293b" stroke-width="2" />
+  <text x="600" y="34" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CAMPUSMIND — END-TO-END PROCESSING & ANALYTICS PIPELINE</text>
+
+  <!-- Stage 1 -->
+  <rect x="30" y="60" width="195" height="125" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" />
+  <text x="127" y="92" text-anchor="middle" fill="#38bdf8" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">1. Input Ingestion</text>
+  <text x="127" y="118" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="12">Resume & Target JD</text>
+  <text x="127" y="140" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Regex Normalization</text>
+  <text x="127" y="160" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Stop-Word Filtering</text>
+
+  <line x1="225" y1="122" x2="262" y2="122" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)" />
+
+  <!-- Stage 2 -->
+  <rect x="268" y="60" width="195" height="125" rx="12" fill="#0f172a" stroke="#818cf8" stroke-width="1.8" />
+  <text x="365" y="92" text-anchor="middle" fill="#818cf8" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">2. TF-IDF Vectorizer</text>
+  <text x="365" y="118" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="12">Unigram & Bigram Matrix</text>
+  <text x="365" y="140" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Feature Weighting</text>
+  <text x="365" y="160" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Vocabulary Alignment</text>
+
+  <line x1="463" y1="122" x2="500" y2="122" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)" />
+
+  <!-- Stage 3 -->
+  <rect x="506" y="60" width="195" height="125" rx="12" fill="#0f172a" stroke="#f59e0b" stroke-width="1.8" />
+  <text x="603" y="92" text-anchor="middle" fill="#f59e0b" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">3. ATS Scoring Engine</text>
+  <text x="603" y="118" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="12">Cosine Similarity</text>
+  <text x="603" y="140" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Missing Term Ranking</text>
+  <text x="603" y="160" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Gap Recommendations</text>
+
+  <line x1="701" y1="122" x2="738" y2="122" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)" />
+
+  <!-- Stage 4 -->
+  <rect x="744" y="60" width="195" height="125" rx="12" fill="#0f172a" stroke="#c084fc" stroke-width="1.8" />
+  <text x="841" y="92" text-anchor="middle" fill="#c084fc" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">4. FastAPI Service</text>
+  <text x="841" y="118" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="12">Pydantic Schemas</text>
+  <text x="841" y="140" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">/analyze-ats & /health</text>
+  <text x="841" y="160" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Pytest Validated</text>
+
+  <line x1="939" y1="122" x2="976" y2="122" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)" />
+
+  <!-- Stage 5 -->
+  <rect x="982" y="60" width="188" height="125" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.8" />
+  <text x="1076" y="92" text-anchor="middle" fill="#34d399" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">5. Streamlit Hub</text>
+  <text x="1076" y="118" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Inter, sans-serif" font-size="12">ATS & JD Diagnostics</text>
+  <text x="1076" y="140" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">Placement Pipeline</text>
+  <text x="1076" y="160" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, Inter, sans-serif" font-size="11">DSA Plotly Analytics</text>
+
+  <!-- Footer Status Bar -->
+  <rect x="30" y="203" width="1140" height="30" rx="6" fill="#050811" stroke="#1e293b" stroke-width="1" />
+  <text x="600" y="222" text-anchor="middle" fill="#64748b" font-family="Consolas, monospace" font-size="11" font-weight="600">DETERMINISTIC TEXT NORMALIZATION • N-GRAM TF-IDF VECTORIZATION • AUTOMATED PYTEST SUITE • 24x7 KEEP-ALIVE</text>
+</svg>
